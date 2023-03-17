@@ -1,0 +1,15 @@
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\Exception.csproj.AssemblyReference.cache
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\Exception.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\Exception.AssemblyInfoInputs.cache
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\Exception.AssemblyInfo.cs
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\Exception.csproj.CoreCompileInputs.cache
+C:\dev\csharp\Work\Exception\bin\Debug\net7.0\Exception.exe
+C:\dev\csharp\Work\Exception\bin\Debug\net7.0\Exception.deps.json
+C:\dev\csharp\Work\Exception\bin\Debug\net7.0\Exception.runtimeconfig.json
+C:\dev\csharp\Work\Exception\bin\Debug\net7.0\Exception.dll
+C:\dev\csharp\Work\Exception\bin\Debug\net7.0\Exception.pdb
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\Exception.dll
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\refint\Exception.dll
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\Exception.pdb
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\Exception.genruntimeconfig.cache
+C:\dev\csharp\Work\Exception\obj\Debug\net7.0\ref\Exception.dll
