@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Epsilon.CoreTests.EcoleTests
 {
+    [TestClass()]
     public class GetMajor_Doit
     {
         [TestMethod]
