@@ -1,10 +1,5 @@
 ﻿using Epsilon.Core.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Epsilon.CoreTests.EcoleTests
 {
@@ -14,11 +9,14 @@ namespace Epsilon.CoreTests.EcoleTests
         public void RetournerVide_Quand0Eleve()
         {
             Ecole ecole = new Ecole();
-            Classe sn2Dev = new Classe() { Nom = "SN2 Dev" };
-            sn2Dev.Eleves.Add(ModelHelper.CreateEleve(""))
-            Classe sn2Reseau = new Classe() { Nom = "SN2 Réseau" };
 
-            var actual = classe.GetMajor();
+            Classe sn2Dev = new Classe() { Nom = "SN2 Dev" };
+            ecole.Classes.Add(sn2Dev);
+
+            Classe sn2Reseau = new Classe() { Nom = "SN2 Réseau" };
+            ecole.Classes.Add(sn2Reseau);
+
+            var actual = ecole.GetMajor();
 
             Assert.IsNull(actual);
         }
@@ -26,15 +24,24 @@ namespace Epsilon.CoreTests.EcoleTests
         [TestMethod]
         public void RetournerMajor_QuandPlusieursEleve()
         {
-            Classe classe = new Classe();
-            classe.Eleves.Add(ModelHelper.CreateEleve("alain", 1, 2, 3));
-            classe.Eleves.Add(ModelHelper.CreateEleve("bernard", 15, 15, 17, 18));
-            classe.Eleves.Add(ModelHelper.CreateEleve("albert", 12));
+            Ecole ecole = new Ecole();
 
-            var actual = classe.GetMajor();
+            Classe sn2Dev = new Classe();
+            ecole.Classes.Add(sn2Dev);
+            sn2Dev.Eleves.Add(ModelHelper.CreateEleve("alain", 1, 2, 3));
+            sn2Dev.Eleves.Add(ModelHelper.CreateEleve("bernard", 15, 15, 17, 18));
+            sn2Dev.Eleves.Add(ModelHelper.CreateEleve("albert", 12));
 
-            Assert.AreEqual("bernard", actual.Nom);
+            Classe sn2Reseau = new Classe() { Nom = "SN2 Réseau" };
+            ecole.Classes.Add(sn2Reseau);
+            sn2Reseau.Eleves.Add(ModelHelper.CreateEleve("marvin", 0, 1, 2));
+            sn2Reseau.Eleves.Add(ModelHelper.CreateEleve("walter", 11, 15, 15));
+            sn2Reseau.Eleves.Add(ModelHelper.CreateEleve("seb", 18, 19,20));
+
+            var actual = ecole.GetMajor();
+
+            Assert.AreEqual("seb", actual.Nom);
         }
     }
 }
-}
+
