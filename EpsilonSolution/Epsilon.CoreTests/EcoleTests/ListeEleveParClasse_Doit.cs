@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Epsilon.CoreTests.EcoleTests
 {
     [TestClass()]
-    internal class ListeEleveParClasse_Doit
+    public class ListeEleveParClasse_Doit
     {
 
         [TestMethod()]

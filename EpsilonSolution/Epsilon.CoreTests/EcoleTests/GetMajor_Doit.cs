@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Epsilon.CoreTests.EcoleTests
 {
-    internal class GetMajor_Doit
+    public class GetMajor_Doit
     {
         [TestMethod]
         public void RetournerVide_Quand0Eleve()

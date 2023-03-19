@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Epsilon.CoreTests.EcoleTests
 {
     [TestClass()]
-    internal class AjouteEleve_Doit
+    public class AjouteEleve_Doit
     {
         [TestMethod()]
         public void AjouterLEleveALaClasse_QuandLaClasseExisteDeja()

@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Epsilon.CoreTests.EleveTests
 {
     [TestClass()]
-    internal class CalculMoyenne_Doit
+    public class CalculMoyenne_Doit
     {
         [TestMethod]
         public void Renvoyer0_SiPasDeNote()

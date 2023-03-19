@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Epsilon.CoreTests.EleveTests
 {
     [TestClass()]
-    internal class AjouterNotes_Doit
+    public class AjouterNotes_Doit
     {
         [TestMethod()]
         public void Rien_SiPasDeNote()
