@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using Exception;
+using System.Runtime.CompilerServices;
 
 public static class Program
 {
@@ -24,7 +25,14 @@ public static class Program
             switch (commande)
             {
                 case "1": ;
-                    Action1();
+                    try
+                    {
+                        Action1();
+                    }
+                    catch (GrosDoigtsException ex)
+                    {
+                        Console.WriteLine($"Vous avez des gros doigts, {ex.Message} !");
+                    }
                     break;
                 default:
                     Console.WriteLine($"Commande {commande} inconnue !");
@@ -48,7 +56,15 @@ public static class Program
         //Ici votre code pour l'action 1
         Console.WriteLine("Entrez un chiffre entre 1 et 10");
         string input = Console.ReadLine();
-        int index = int.Parse(input);
+        int index;
+        try
+        {
+            index = int.Parse(input);
+        }
+        catch (FormatException)
+        {
+            throw new GrosDoigtsException("Votre input n'est pas un entier !");
+        }
         string chaine = _worker.GetElement(index);
 
         Console.WriteLine(chaine);
