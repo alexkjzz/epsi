@@ -11,8 +11,17 @@
             throw new NotImplementedException();
         }
 
+        public Eleve()
+        {
+            this.Notes = new List<Decimal>();
+        }
+
         public decimal CalculMoyenne()
         {
+            if (this.Notes.Count() == 0)
+            {
+                return 0;
+            }
             throw new NotImplementedException();
         }
 

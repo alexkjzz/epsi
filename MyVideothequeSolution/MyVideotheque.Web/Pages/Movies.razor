@@ -1,0 +1,53 @@
+﻿@page "/movies"
+@inject IVideothequeService Service
+@inject Data.MoviesState MoviesState
+@using MyVideotheque.Core.Model;
+@using MyVideotheque.Core.Service;
+
+<PageTitle>Movies</PageTitle>
+
+
+<div class="card-columns">
+    @foreach (var item in this.MoviesState.CachedMovies)
+    {
+        <div class="card" style="width: 150px">
+            <img src="@item.Poster" class="card-img-top" alt="@item.Title" width="150" height="222">
+            <div class="card-body">
+                <h5 class="card-title">@item.Title</h5>
+                @if (item.Watching)
+                {
+                    <span class="badge badge-pill badge-primary">Primary</span>
+                }
+                <span>@item.Rating</span>
+                <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                <button class="btn btn-danger" @onclick="@(e => RemoveThisMovie(item))"><span class="oi oi-delete" aria-hidden="true"></span></button>
+            </div>
+        </div>
+    }
+</div>
+<AddMovie />
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        GetMovies();
+        MoviesState.OnMoviesChange += StateHasChanged;
+    }
+
+    private void GetMovies()
+    {
+        MoviesState.LoadMovies();
+        StateHasChanged();
+    }
+
+
+    private void RemoveThisMovie(Movie item)
+    {
+        //this.MovieService.Delete(item);
+
+        //var itemToDelete = this.AppMovieState.Movies.Find(i => i.Id == item.Id);
+        //this.AppMovieState.Movies.Remove(itemToDelete);
+        //AppMovieState.OnMoviesChange += StateHasChanged;
+    }
+}

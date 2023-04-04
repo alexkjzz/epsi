@@ -1,0 +1,51 @@
+﻿@using MyVideotheque.Core.Model;
+@using MyVideotheque.Core.Service;
+@inject IVideothequeService Service
+@inject Data.MoviesState MoviesState
+<h3>Ajouter un film ou une série</h3>
+
+<p>
+    Titre: <input placeholder="un titre de série à chercher" @bind="titleSearch" />
+    <button @onclick="Search" class="btn btn-primary">Chercher</button>
+</p>
+
+@if (this.Result.Count > 0)
+{
+
+    <div class="card-columns">
+        @foreach (var item in this.Result)
+        {
+            <div class="card" style="width: 150px">
+                <img src="@item.Poster" class="card-img-top" alt="@item.Title" with="150" height="222">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Title</h5>
+                    <button @onclick="@(e => AddThisMovie(item))">Ajouter</button>
+                    <!--<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                    <p class="card-text"><small class="text-muted">@item.Year</small></p>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+
+@code {
+    private string titleSearch;
+    private List<Movie> Result = new List<Movie>();
+
+    private void Search()
+    {
+        if (!string.IsNullOrEmpty(titleSearch))
+        {
+            MovieCatalogFinderService finder = new MovieCatalogFinderService();
+            this.Result = finder.Search(titleSearch);
+        }
+    }
+
+    private void AddThisMovie(Movie movie)
+    {
+        this.MoviesState.AddMovie(movie);
+        this.titleSearch = string.Empty;
+        this.Result = new List<Movie>();
+    }
+}
