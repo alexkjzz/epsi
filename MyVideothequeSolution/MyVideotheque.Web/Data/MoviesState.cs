@@ -20,6 +20,12 @@ namespace MyVideotheque.Web.Data
             NotifyMoviesChanged();
         }
 
+        public void RemoveMovie(Movie movie)
+        {
+            this._service.RemoveMovie(movie);
+            NotifyMoviesChanged();
+        }
+
         public void LoadMovies()
         {
             this.CachedMovies = this._service.GetMovies();

@@ -44,7 +44,10 @@
 
     private void AddThisMovie(Movie movie)
     {
+        //Action
         this.MoviesState.AddMovie(movie);
+
+        //RAZ de l'interface
         this.titleSearch = string.Empty;
         this.Result = new List<Movie>();
     }

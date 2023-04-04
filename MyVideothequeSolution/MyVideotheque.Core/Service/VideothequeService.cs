@@ -30,6 +30,11 @@ namespace MyVideotheque.Core.Service
             this._movies.Add(movie);
             this._persistance.SaveMovies(this._movies.ToArray());
         }
+        public void RemoveMovie(Movie movie)
+        {
+            this._movies.Remove(movie);
+            this._persistance.SaveMovies(this._movies.ToArray());
+        }
 
         public List<Movie> GetMovies()
         {

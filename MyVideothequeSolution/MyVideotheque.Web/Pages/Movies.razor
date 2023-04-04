@@ -1,6 +1,6 @@
 ﻿@page "/movies"
 @inject IVideothequeService Service
-@inject Data.MoviesState MoviesState
+@inject Data.MoviesState MoviesPassePlatState
 @using MyVideotheque.Core.Model;
 @using MyVideotheque.Core.Service;
 
@@ -8,7 +8,7 @@
 
 
 <div class="card-columns">
-    @foreach (var item in this.MoviesState.CachedMovies)
+    @foreach (var item in this.MoviesPassePlatState.CachedMovies)
     {
         <div class="card" style="width: 150px">
             <img src="@item.Poster" class="card-img-top" alt="@item.Title" width="150" height="222">
@@ -32,22 +32,19 @@
     protected override void OnInitialized()
     {
         GetMovies();
-        MoviesState.OnMoviesChange += StateHasChanged;
+        MoviesPassePlatState.OnMoviesChange += StateHasChanged;
     }
 
     private void GetMovies()
     {
-        MoviesState.LoadMovies();
+        MoviesPassePlatState.LoadMovies();
         StateHasChanged();
     }
 
 
     private void RemoveThisMovie(Movie item)
     {
-        //this.MovieService.Delete(item);
-
-        //var itemToDelete = this.AppMovieState.Movies.Find(i => i.Id == item.Id);
-        //this.AppMovieState.Movies.Remove(itemToDelete);
-        //AppMovieState.OnMoviesChange += StateHasChanged;
+        MoviesPassePlatState.RemoveMovie(item);
+        StateHasChanged();
     }
 }

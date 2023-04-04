@@ -7,5 +7,6 @@ namespace MyVideotheque.Core.Service
         List<Movie> GetMovies();
         void AddMovieById(string id);
         void AddMovie(Movie movie);
+        void RemoveMovie(Movie movie);
     }
 }

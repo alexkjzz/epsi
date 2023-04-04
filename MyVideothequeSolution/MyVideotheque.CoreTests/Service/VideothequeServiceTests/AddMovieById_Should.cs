@@ -7,6 +7,8 @@ using MyVideotheque.Core.Service;
 
 namespace MyVideotheque.CoreTests.Service.VideothequeServiceTests
 {
+
+
     [TestClass()]
     public class AddMovieById_Should
     {
