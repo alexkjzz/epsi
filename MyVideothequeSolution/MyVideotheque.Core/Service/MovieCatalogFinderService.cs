@@ -7,7 +7,7 @@ namespace MyVideotheque.Core.Service
 
     public class MovieCatalogFinderService : IMovieCatalogFinderService
     {
-        private static string OMDP_API_KEY = "XXX";
+        private static string OMDP_API_KEY = "e578d967";
 
         private class OmdbApiResponse
         {
