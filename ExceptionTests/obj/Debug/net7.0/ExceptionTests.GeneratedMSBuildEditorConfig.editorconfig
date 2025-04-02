@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ExceptionTests
-build_property.ProjectDir = c:\Temp\epsi\ExceptionTests\
+build_property.ProjectDir = C:\dev\gitcsharp\epsi\ExceptionTests\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

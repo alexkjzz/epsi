@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Temp\\epsi\\ExceptionTests\\ExceptionTests.csproj": {}
+    "C:\\dev\\gitcsharp\\epsi\\ExceptionTests\\ExceptionTests.csproj": {}
   },
   "projects": {
-    "C:\\Temp\\epsi\\ExceptionTests\\ExceptionTests.csproj": {
+    "C:\\dev\\gitcsharp\\epsi\\ExceptionTests\\ExceptionTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\epsi\\ExceptionTests\\ExceptionTests.csproj",
+        "projectUniqueName": "C:\\dev\\gitcsharp\\epsi\\ExceptionTests\\ExceptionTests.csproj",
         "projectName": "ExceptionTests",
-        "projectPath": "C:\\Temp\\epsi\\ExceptionTests\\ExceptionTests.csproj",
-        "packagesPath": "C:\\Users\\etien\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\epsi\\ExceptionTests\\obj\\",
+        "projectPath": "C:\\dev\\gitcsharp\\epsi\\ExceptionTests\\ExceptionTests.csproj",
+        "packagesPath": "C:\\Users\\LAMONNIER Alexis\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\gitcsharp\\epsi\\ExceptionTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\etien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LAMONNIER Alexis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Temp\\epsi\\Exception\\Exception.csproj": {
-                "projectPath": "C:\\Temp\\epsi\\Exception\\Exception.csproj"
+              "C:\\dev\\gitcsharp\\epsi\\Exception\\Exception.csproj": {
+                "projectPath": "C:\\dev\\gitcsharp\\epsi\\Exception\\Exception.csproj"
               }
             }
           }
@@ -43,6 +43,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -77,29 +82,43 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Temp\\epsi\\Exception\\Exception.csproj": {
+    "C:\\dev\\gitcsharp\\epsi\\Exception\\Exception.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\epsi\\Exception\\Exception.csproj",
+        "projectUniqueName": "C:\\dev\\gitcsharp\\epsi\\Exception\\Exception.csproj",
         "projectName": "Exception",
-        "projectPath": "C:\\Temp\\epsi\\Exception\\Exception.csproj",
-        "packagesPath": "C:\\Users\\etien\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\epsi\\Exception\\obj\\",
+        "projectPath": "C:\\dev\\gitcsharp\\epsi\\Exception\\Exception.csproj",
+        "packagesPath": "C:\\Users\\LAMONNIER Alexis\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\gitcsharp\\epsi\\Exception\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\etien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LAMONNIER Alexis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -121,6 +140,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -137,12 +161,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
